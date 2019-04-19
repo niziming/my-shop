@@ -5,11 +5,13 @@ import cn.ziming.my.shop.entity.User;
 import cn.ziming.my.shop.web.utils.DBUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Repository;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
+@Repository(value = "userDao")
 public class UserDaoImpl implements UserDao {
 
     // 日志
@@ -17,6 +19,7 @@ public class UserDaoImpl implements UserDao {
 
     @Override
     public User quireUserByUid(User user) {
+
         logger.debug("调用 quireUserByUid(), email{} pwd{}",user.getEmail(),user.getPwd());
 
         try {

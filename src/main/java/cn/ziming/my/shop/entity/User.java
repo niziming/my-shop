@@ -1,7 +1,10 @@
 package cn.ziming.my.shop.entity;
 
+import org.springframework.stereotype.Component;
+
 import java.io.Serializable;
 
+@Component
 public class User implements Serializable {
 
     private String uid;

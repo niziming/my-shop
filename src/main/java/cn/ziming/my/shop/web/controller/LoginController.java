@@ -4,6 +4,7 @@ import cn.ziming.my.shop.commons.context.SpringContext;
 import cn.ziming.my.shop.entity.User;
 import cn.ziming.my.shop.service.UserService;
 import cn.ziming.my.shop.web.utils.TimeStampUtil;
+import org.springframework.stereotype.Controller;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -14,20 +15,16 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.sql.SQLException;
 
+@Controller
 @WebServlet(name = "LoginController")
 public class LoginController extends HttpServlet {
     // 注入
-    private UserService userService = (UserService) new SpringContext().getSpringBean("userService");
+    private UserService userService = new SpringContext().getBean("userService");
 
-    // @Override
-    // protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-    //     try {
-    //         User admin = userService.login("ziming@admin.com", "admin");
-    //         System.out.println(admin);
-    //     } catch (SQLException e) {
-    //         e.printStackTrace();
-    //     }
-    // }
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        userService.sayHi();
+    }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -54,7 +51,7 @@ public class LoginController extends HttpServlet {
                 request.getRequestDispatcher("/login.jsp").forward(request, response);
             } else {
                 session.setAttribute("user", user);
-                request.setAttribute("timestamp", timeStamp);
+                session.setAttribute("timestamp", timeStamp);
                 // 请求转发
                 request.getRequestDispatcher("/success.jsp").forward(request, response);
             }

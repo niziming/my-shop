@@ -15,7 +15,7 @@
     <%--String timeStamp = session.getAttribute("timeStamp").toString();--%>
 <%--%>--%>
 登陆成功 <br>
-${timeStamp}
+${sessionScope.timestamp}
 ${sessionScope.user.uid}
 ${sessionScope.user.uname}
 ${sessionScope.user.email}

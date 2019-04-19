@@ -40,6 +40,35 @@ my-shop
 
 Log4j埋点
 
+## Spring注解
+ - `@Component`
+需要在类上使用注解 @Component，该注解的 value 属性用于指定该 bean 的 id 值。
+~~~ java
+@Component(value = "student")
+public class Student {
+    private Long id;
+    private String name;
+    public Long getId() {return id;}
+    public void setId(Long id) {this.id = id;}
+    public String getName() {return name;}
+    public void setName(String name) {this.name = name;}
+    @Override
+    public String toString() {
+        return "Student{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                '}';
+    }
+}
+~~~
+
+Spring 还提供了 3 个功能基本和 @Component 等效的注解：
+
+- @Repository：用于对 DAO 实现类进行注解
+- @Service：用于对 Service 实现类进行注解
+- @Controller：用于对 Controller 实现类进行注解
+
+# @Scope
 
 ## 参考资料
 > 前端工具
