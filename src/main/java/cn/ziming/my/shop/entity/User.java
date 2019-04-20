@@ -12,6 +12,9 @@ public class User implements Serializable {
     private String email;
     private String pwd;
 
+    // cookie 记住我
+    private boolean isRemember;
+
     public User() {}
 
     public User(String email, String pwd) {
@@ -49,6 +52,14 @@ public class User implements Serializable {
 
     public void setPwd(String pwd) {
         this.pwd = pwd;
+    }
+
+    public boolean isRemember() {
+        return isRemember;
+    }
+
+    public void setRemember(boolean remember) {
+        isRemember = remember;
     }
 
     @Override

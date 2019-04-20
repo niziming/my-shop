@@ -16,15 +16,51 @@
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>
 
-    <!--LoginController-->
+    <!--&lt;!&ndash;LoginController&ndash;&gt;-->
+    <!--<servlet>-->
+        <!--<servlet-name>LoginController</servlet-name>-->
+        <!--<servlet-class>cn.ziming.my.shop.web.controller.LoginController</servlet-class>-->
+    <!--</servlet>-->
+    <!--<servlet-mapping>-->
+        <!--<servlet-name>LoginController</servlet-name>-->
+        <!--<url-pattern>/login</url-pattern>-->
+    <!--</servlet-mapping>-->
+
+    <!--SpringMVC start-->
+    <!--CharacterEncodingFilter-->
+    <filter>
+        <filter-name>encodingFilter</filter-name>
+        <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+        <init-param>
+            <param-name>forceEncoding</param-name>
+            <param-value>true</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>encodingFilter</filter-name>
+        <!--拦截所有请求-->
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <!--DispatcherServlet核心组件分发器-->
     <servlet>
-        <servlet-name>LoginController</servlet-name>
-        <servlet-class>cn.ziming.my.shop.web.controller.LoginController</servlet-class>
+        <servlet-name>springServlet</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+        <init-param>
+            <param-name>contextConfigLocation</param-name>
+            <param-value>classpath*:/spring-mvc*.xml</param-value>
+        </init-param>
+        <!--启动优先级 越小越高-->
+        <load-on-startup>1</load-on-startup>
     </servlet>
     <servlet-mapping>
-        <servlet-name>LoginController</servlet-name>
-        <url-pattern>/login</url-pattern>
+        <servlet-name>springServlet</servlet-name>
+        <!--拦截所有请求-->
+        <url-pattern>/</url-pattern>
     </servlet-mapping>
-
-
+    <!--SpringMVC END-->
 </web-app>

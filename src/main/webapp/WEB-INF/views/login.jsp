@@ -16,15 +16,15 @@
     <!-- Tell the browser to be responsive to screen width 响应式 -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport"/>
     <!-- Bootstrap 3.3.7 -->
-    <link rel="stylesheet" href="assets/bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../../assets/bower_components/bootstrap/dist/css/bootstrap.min.css"/>
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="assets/bower_components/font-awesome/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../../assets/bower_components/font-awesome/css/font-awesome.min.css"/>
     <!-- Ionicons -->
-    <link rel="stylesheet" href="assets/bower_components/Ionicons/css/ionicons.min.css"/>
+    <link rel="stylesheet" href="../../assets/bower_components/Ionicons/css/ionicons.min.css"/>
     <!-- Theme style -->
-    <link rel="stylesheet" href="assets/css/AdminLTE.min.css"/>
+    <link rel="stylesheet" href="../../assets/css/AdminLTE.min.css"/>
     <!-- iCheck -->
-    <link rel="stylesheet" href="assets/plugins/iCheck/square/blue.css"/>
+    <link rel="stylesheet" href="../../assets/plugins/iCheck/square/blue.css"/>
 
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -56,27 +56,27 @@
 
         <form action="/login" method="post">
             <div class="form-group has-feedback">
-                <input type="email" class="form-control" placeholder="邮箱" name="email">
+                <input type="email" class="form-control" placeholder="邮箱" name="email" />
                 <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
             </div>
 
 
 
             <div class="form-group has-feedback">
-                <input type="password" class="form-control" placeholder="密码" name="pwd">
+                <input type="password" class="form-control" placeholder="密码" name="pwd" />
                 <span class="glyphicon glyphicon-lock form-control-feedback"></span>
             </div>
             <div class="row">
                 <div class="col-xs-8">
                     <div class="checkbox icheck">
                         <label>
-                            <input type="checkbox"> 记住我?
+                            <input name="isRemember" type="checkbox"> 记住我?
                         </label>
                     </div>
                 </div>
                 <!-- /.col -->
                 <div class="col-xs-4">
-                    <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
+                    <button type="submit" class="btn btn-primary btn-block btn-flat">登陆</button>
                 </div>
                 <!-- /.col -->
             </div>
@@ -89,11 +89,11 @@
 <!-- /.UserService-box -->
 
 <!-- jQuery 3 -->
-<script src="assets/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="../../assets/bower_components/jquery/dist/jquery.min.js"></script>
 <!-- Bootstrap 3.3.7 -->
-<script src="assets/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="../../assets/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <!-- iCheck -->
-<script src="assets/plugins/iCheck/icheck.min.js"></script>
+<script src="../../assets/plugins/iCheck/icheck.min.js"></script>
 <script>
     $(function () {
         $('input').iCheck({
