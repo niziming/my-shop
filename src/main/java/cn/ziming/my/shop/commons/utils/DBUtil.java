@@ -1,4 +1,4 @@
-package cn.ziming.my.shop.web.utils;
+package cn.ziming.my.shop.commons.utils;
 
 import java.io.InputStream;
 import java.sql.*;

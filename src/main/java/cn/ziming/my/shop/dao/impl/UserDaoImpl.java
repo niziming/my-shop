@@ -2,7 +2,7 @@ package cn.ziming.my.shop.dao.impl;
 
 import cn.ziming.my.shop.dao.UserDao;
 import cn.ziming.my.shop.entity.User;
-import cn.ziming.my.shop.web.utils.DBUtil;
+import cn.ziming.my.shop.commons.utils.DBUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Repository;

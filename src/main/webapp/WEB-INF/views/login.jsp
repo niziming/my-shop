@@ -3,7 +3,7 @@
 
 <%
     String path = request.getContextPath();
-    String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+    String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
 %>
 <%--代表HTML5--%>
 <!DOCTYPE html>
@@ -16,15 +16,15 @@
     <!-- Tell the browser to be responsive to screen width 响应式 -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport"/>
     <!-- Bootstrap 3.3.7 -->
-    <link rel="stylesheet" href="../../assets/bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/static/assets/bower_components/bootstrap/dist/css/bootstrap.min.css"/>
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="../../assets/bower_components/font-awesome/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="/static/assets/bower_components/font-awesome/css/font-awesome.min.css"/>
     <!-- Ionicons -->
-    <link rel="stylesheet" href="../../assets/bower_components/Ionicons/css/ionicons.min.css"/>
+    <link rel="stylesheet" href="/static/assets/bower_components/Ionicons/css/ionicons.min.css"/>
     <!-- Theme style -->
-    <link rel="stylesheet" href="../../assets/css/AdminLTE.min.css"/>
+    <link rel="stylesheet" href="/static/assets/css/AdminLTE.min.css"/>
     <!-- iCheck -->
-    <link rel="stylesheet" href="../../assets/plugins/iCheck/square/blue.css"/>
+    <link rel="stylesheet" href="/static/assets/plugins/iCheck/square/blue.css"/>
 
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -37,6 +37,7 @@
 <%--Header End--%>
 
 <body class="hold-transition login-page">
+
 <div class="login-box">
     <div class="login-logo">
         <a href="#"><b>Admin</b>登陆</a>
@@ -46,8 +47,8 @@
         <p class="login-box-msg">欢迎管理员登陆</p>
 
         <%--Denger alert--%>
-            <c:if test="${msg != null}">
-            <div class="alert alert-danger alert-dismissible" >
+        <c:if test="${msg != null}">
+            <div class="alert alert-danger alert-dismissible">
                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
                     ${msg}
             </div>
@@ -56,14 +57,13 @@
 
         <form action="/login" method="post">
             <div class="form-group has-feedback">
-                <input type="email" class="form-control" placeholder="邮箱" name="email" />
+                <input type="email" class="form-control" placeholder="邮箱" name="email"/>
                 <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
             </div>
 
 
-
             <div class="form-group has-feedback">
-                <input type="password" class="form-control" placeholder="密码" name="pwd" />
+                <input type="password" class="form-control" placeholder="密码" name="pwd"/>
                 <span class="glyphicon glyphicon-lock form-control-feedback"></span>
             </div>
             <div class="row">
@@ -89,9 +89,9 @@
 <!-- /.UserService-box -->
 
 <!-- jQuery 3 -->
-<script src="../../assets/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="/static/assets/bower_components/jquery/dist/jquery.min.js"></script>
 <!-- Bootstrap 3.3.7 -->
-<script src="../../assets/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="/static/assets/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <!-- iCheck -->
 <script src="../../assets/plugins/iCheck/icheck.min.js"></script>
 <script>

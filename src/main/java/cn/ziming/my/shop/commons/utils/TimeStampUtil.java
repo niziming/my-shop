@@ -1,4 +1,4 @@
-package cn.ziming.my.shop.web.utils;
+package cn.ziming.my.shop.commons.utils;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;

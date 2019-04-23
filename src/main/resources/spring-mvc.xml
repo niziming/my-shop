@@ -30,4 +30,26 @@
 
     <!-- 静态资源映射 **代表全目录匹配-->
     <mvc:resources mapping="/static/**" location="/static/" cache-period="31536000"/>
+
+    <!--拦截器配置 执行顺序由下自上-->
+    <mvc:interceptors>
+        <!--login interceptter-->
+        <mvc:interceptor>
+            <!--拦截所有路径请求-->
+            <mvc:mapping path="/**"/>
+            <!--除了登陆页面-->
+            <mvc:exclude-mapping path="/login" />
+            <!--除开静态资源路径-->
+            <mvc:exclude-mapping path="/static/**" />
+            <bean class="cn.ziming.my.shop.web.interceptor.LoginInterceptor" />
+        </mvc:interceptor>
+
+        <!--permission interceptter-->
+        <mvc:interceptor>
+            <!--拦截所有路径请求-->
+            <mvc:mapping path="/**"/>
+            <bean class="cn.ziming.my.shop.web.interceptor.PermissionInterceptor" />
+        </mvc:interceptor>
+
+    </mvc:interceptors>
 </beans>

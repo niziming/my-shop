@@ -1,8 +1,7 @@
 package cn.ziming.my.shop.web.utils;
 
+import cn.ziming.my.shop.commons.utils.TimeStampUtil;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 public class TimeStampUtilTest {
 

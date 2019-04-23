@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 
 import java.sql.SQLException;
 
-@Service(value = "userService")
+@Service
 public class UserServiceImpl implements UserService {
     // 注入
     private UserDao userDao = new SpringContext().getBean("userDao");
